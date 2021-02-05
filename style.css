@@ -1,0 +1,89 @@
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: whitesmoke;
+}
+
+.container {
+  height: 600px;
+  width: 400px;
+  border-radius: 10px;
+
+  background: #000046; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to top,
+    #1cb5e0,
+    #000046
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to top,
+    #1cb5e0,
+    #000046
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.parent {
+  /* background-color: hsla(200, 100%, 20%); */
+
+  background: #b2fefa; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #0ed2f7,
+    #b2fefa
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #0ed2f7,
+    #b2fefa
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  height: 400px;
+  width: 400px;
+  overflow: hidden;
+}
+
+.child {
+  background-color: darkorange;
+  height: 50%;
+  width: 50%;
+  border-radius: 50%;
+  margin: 0 auto;
+  transform: translateY(175%);
+}
+
+.container:hover .child {
+  /* transform: translateX(100%); */
+  /* animation-name, animation-duration, animation-timing-function, animation-delay, animation-iteration-count, animation-direction, animation-fill-mode, and animation-play-state */
+  /* animation: bounce 1s ease-in forwards 3 alternate 100ms; */
+  animation-name: bounce;
+  animation-duration: 3s;
+  animation-timing-function: ease-in;
+  animation-delay: 100ms;
+  animation-iteration-count: 1;
+  animation-direction: alternate;
+  animation-fill-mode: forwards;
+  /* animation-play-state: paused; */
+}
+
+/* @keyframes bounce {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateY(100%);
+  }
+} */
+
+@keyframes bounce {
+  0% {
+    transform: translateY(175%);
+  }
+
+  100% {
+    transform: translateY(50%);
+    background-color: orange;
+  }
+}
